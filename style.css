@@ -1,0 +1,21 @@
+.container {
+  padding: 2em;
+}
+
+.padding {
+  padding: 1em;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-row-gap: 16px;
+}
+.modal-body h1,
+.modal-grid {
+  margin-bottom: 36px;
+}
+
+footer {
+  text-align: center;
+}
