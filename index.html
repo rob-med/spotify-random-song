@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Just a Random Song</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://sp-bootstrap.global.ssl.fastly.net/8.0.0/sp-bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="/style.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://button.glitch.me/button.js"></script>
+
+    <!-- Include the Web Playback SDK -->
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+
+    <!-- Include our Javascript -->
+    <script src="/script.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+  </head>
+
+  <body class="container">
+    <div class="alert alert-info" role="alert">
+      Hey there! If you have Spotify Premium, the playback will start
+      automatically.
+    </div>
+
+    <!-- Project Helper -->
+    <div class="glitchButton pull-right"></div>
+
+    <h1 class="text-tangerine">Just a random song.</h1>
+
+    <div class="row padding">
+      <center>
+        <button id="big-button" class="btn btn-sm" onclick="getASong()">
+          get a random song
+        </button>
+      </center>
+    </div>
+
+    <div class="row padding">
+      <center class="contender">
+        <a href="#" onclick="saveTrack('current-track-name-save')">
+          <img style="display:none;" id="current-track-name-save" src="//:0" />
+        </a>
+        <br />
+        <iframe
+          id="embed-uri"
+          src="about:blank"
+          width="300"
+          height="380"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+        ></iframe>
+      </center>
+    </div>
+
+    <footer>
+      <p>
+        powered by
+        <a href="https://developer.spotify.com/documentation/web-api/"
+          >Spotify API</a
+        >, made with 🤟 by <a href="http://robertomedico.tech">@rob_medico</a>,
+        idea by <a href="https://www.reddit.com/user/voidtype/">u/voidtype</a>
+        <br /><small>
+          <a href="icons8.com">icons</a>,
+          <a href="https://spotify-recommendations.glitch.me/#"
+            >auth & template</a
+          ></small
+        >
+      </p>
+    </footer>
+  </body>
+</html>
